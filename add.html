@@ -1,0 +1,9 @@
+<h1>blog</h1>
+
+{{with .Blogs}}
+	{{range .}}
+		user:{{.User}}
+		content:{{.Content}}
+	{{end}}
+{{end}}
+

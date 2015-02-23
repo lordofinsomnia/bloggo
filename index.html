@@ -1,0 +1,22 @@
+<h1>blogs</h1>
+
+{{with .Blogs}}
+	{{range .}}
+	<p>
+		user:{{.User}}
+		content:{{.Content}}
+	</p>
+	{{end}}
+{{end}}
+
+<form action="add" method="POST">
+	<div>
+		User:<textarea name="User" rows="2" cols="20"></textarea>
+	</div>
+	<div>
+		Content:<textarea name="Content" rows="5" cols="20"></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Add">
+	</div>
+</form>
