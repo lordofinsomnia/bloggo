@@ -121,6 +121,7 @@ func makeHandler(fn func(w http.ResponseWriter, r *http.Request, title string)) 
 }
 
 func main() {
+	log.Println("start server")
 	flag.Parse()
 	http.HandleFunc("/", makeHandler(indexHandler))
 	http.HandleFunc("/view/", makeHandler(viewHandler))
@@ -142,4 +143,5 @@ func main() {
 	}
 
 	http.ListenAndServe(":8080", nil)
+	log.Println("end server")
 }
